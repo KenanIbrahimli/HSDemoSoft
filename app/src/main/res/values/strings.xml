@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HSDemoSoft</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="country_name">"Country name: "</string>
+    <string name="country_native">"Country native: "</string>
+    <string name="country_currency">"Currency: "</string>
+    <string name="country_capital">Capital: </string>
+    <string name="refresh">Refresh</string>
+</resources>
