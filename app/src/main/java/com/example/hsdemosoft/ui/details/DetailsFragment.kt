@@ -11,8 +11,6 @@ import androidx.databinding.DataBindingUtil
 import com.example.hsdemosoft.R
 import com.example.hsdemosoft.databinding.FragmentDetailsBinding
 import com.example.hsdemosoft.ui.MainActivity
-import com.example.hsdemosoft.utils.loadImg
-
 
 class DetailsFragment : Fragment() {
 
@@ -62,7 +60,7 @@ class DetailsFragment : Fragment() {
         binding.countryCapital.text = capital
         binding.countryNative.text = native
         binding.countryCurrency.text = currency
-        binding.emojiIv.loadImg(emoji!!)
+        binding.emojiText?.text = emoji
         binding.languageName.text = languageName
         binding.languageCode.text = languageCode
 

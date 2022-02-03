@@ -4,13 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Kanan/AndroidStudioProjects/HSDemoSoft2/app/src/main/res/layout-land/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/Kanan/AndroidStudioProjects/HSDemoSoft2/app/src/main/res/layout-land/fragment_details.xml" value="0.10449735449735449" />
-        <entry key="..\:/Users/Kanan/AndroidStudioProjects/HSDemoSoft2/app/src/main/res/layout-land/fragment_list.xml" value="0.10449735449735449" />
+        <entry key="..\:/Users/Kanan/AndroidStudioProjects/HSDemoSoft2/app/src/main/res/layout-land/fragment_details.xml" value="0.32406602953953084" />
+        <entry key="..\:/Users/Kanan/AndroidStudioProjects/HSDemoSoft2/app/src/main/res/layout-land/fragment_list.xml" value="0.2" />
         <entry key="..\:/Users/Kanan/AndroidStudioProjects/HSDemoSoft2/app/src/main/res/layout-land/rcl_county_data_item.xml" value="0.1" />
         <entry key="..\:/Users/Kanan/AndroidStudioProjects/HSDemoSoft2/app/src/main/res/layout/activity_main.xml" value="0.16799999999999998" />
-        <entry key="..\:/Users/Kanan/AndroidStudioProjects/HSDemoSoft2/app/src/main/res/layout/fragment_details.xml" value="0.264" />
+        <entry key="..\:/Users/Kanan/AndroidStudioProjects/HSDemoSoft2/app/src/main/res/layout/fragment_details.xml" value="0.2" />
         <entry key="..\:/Users/Kanan/AndroidStudioProjects/HSDemoSoft2/app/src/main/res/layout/fragment_list.xml" value="0.1640625" />
-        <entry key="..\:/Users/Kanan/AndroidStudioProjects/HSDemoSoft2/app/src/main/res/layout/rcl_county_data_item.xml" value="0.2" />
+        <entry key="..\:/Users/Kanan/AndroidStudioProjects/HSDemoSoft2/app/src/main/res/layout/rcl_county_data_item.xml" value="0.536" />
       </map>
     </option>
   </component>

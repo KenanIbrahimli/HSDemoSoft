@@ -38,18 +38,4 @@ class CountryRepository {
         }
     }
 
-
-    suspend fun updateData(item: String): Int = withContext(Dispatchers.IO){
-        try {
-            val value = CountryDBModel(
-                id = 0,
-                respose = item
-            )
-            countryDbSettings.updateDataInDb(value)
-            100
-        }catch (ex:Exception){
-            0
-        }
-    }
-
 }

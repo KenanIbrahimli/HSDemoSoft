@@ -8,8 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.hsdemosoft.R
 import com.example.hsdemosoft.databinding.RclCountyDataItemBinding
 import com.example.hsdemosoft.models.Country
-import com.example.hsdemosoft.models.CountryModel
-import com.example.hsdemosoft.utils.loadImg
 
 class ListFragmentAdapter(private val listener: (Country) -> Unit) : RecyclerView.Adapter<ListFragmentAdapter.ListFragmentViewHolder>()   {
     private val countryList: ArrayList<Country> = arrayListOf()
@@ -46,7 +44,7 @@ class ListFragmentAdapter(private val listener: (Country) -> Unit) : RecyclerVie
 
     inner class ListFragmentViewHolder(private val binding: RclCountyDataItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(data: Country){
-            binding.countryImage.loadImg(data.emoji)
+            binding.emojiText.text = data.emoji
             binding.countryName.text = data.name
 
             binding.root.setOnClickListener {

@@ -7,4 +7,6 @@
     <string name="country_currency">"Currency: "</string>
     <string name="country_capital">Capital: </string>
     <string name="refresh">Refresh</string>
+    <string name="code">Code:</string>
+    <string name="language">Language:</string>
 </resources>

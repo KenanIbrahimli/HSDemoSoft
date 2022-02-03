@@ -1,20 +1,17 @@
 package com.example.hsdemosoft.ui.main
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.hsdemosoft.MainApplication
 import com.example.hsdemosoft.data.repository.RepositoryImpl
-import com.example.hsdemosoft.db.CountryDBModel
 import com.example.hsdemosoft.db.CountryRepository
 import com.example.hsdemosoft.models.Country
 import com.example.hsdemosoft.models.CountryModel
-import com.example.hsdemosoft.ui.MainActivity
 import com.example.hsdemosoft.utils.Constants
-import com.example.hsdemosoft.utils.Utilities
 import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -31,8 +28,6 @@ class ListFragmentViewModel : ViewModel() {
     private var job = Job()
     private var corutineScope = CoroutineScope(Dispatchers.IO + job)
 
-    var toastLiveData: MutableLiveData<String> = MutableLiveData()
-    private var cachedResponse: CountryDBModel? = null
 
     @Inject
     lateinit var gSon: Gson
@@ -43,6 +38,7 @@ class ListFragmentViewModel : ViewModel() {
     @Inject
     lateinit var dbRepository: CountryRepository
 
+    @SuppressLint("StaticFieldLeak")
     @Inject
     lateinit var context: Context
 
@@ -84,7 +80,7 @@ class ListFragmentViewModel : ViewModel() {
                 countryResponse.postValue(null)
             }else{
                 //convert json to model
-                val cachedModel = gSon.fromJson(cachedResponse?.respose, CountryModel::class.java)
+                val cachedModel = gSon.fromJson(cachedResponse.respose, CountryModel::class.java)
 
                 //add data to livedata
                 countryResponse.postValue(cachedModel.data.countries)

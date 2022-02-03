@@ -13,4 +13,8 @@ object Utilities {
         return activeNetworkInfo != null && activeNetworkInfo.isConnected
     }
 
+
+
+
 }
+

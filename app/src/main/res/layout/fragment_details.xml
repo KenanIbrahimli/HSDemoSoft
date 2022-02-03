@@ -9,17 +9,15 @@
         android:orientation="vertical"
         tools:context=".ui.details.DetailsFragment">
 
-        <androidx.cardview.widget.CardView
+        <TextView
+            android:gravity="center"
+            tools:text= "te"
+            android:id="@+id/emoji_text"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="150dp"
             app:cardBackgroundColor="#F4E9E9">
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/emoji_iv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher"/>
-        </androidx.cardview.widget.CardView>
+        </TextView>
+
 
 
         <LinearLayout
@@ -85,18 +83,63 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"/>
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/language_name"
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"/>
+                    app:cardBackgroundColor="@color/oceanBlue"
+                    android:padding="10dp"
+                    android:layout_margin="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/language_code"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/cardViewTextStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/language"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/cardViewTextStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/code"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingVertical="10dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/cardViewTextStyle"
+                                android:id="@+id/language_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                tools:text="English" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/cardViewTextStyle"
+                                android:id="@+id/language_code"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="en" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
+
         </LinearLayout>
 
 

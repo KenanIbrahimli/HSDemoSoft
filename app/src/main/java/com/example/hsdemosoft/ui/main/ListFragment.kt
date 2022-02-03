@@ -1,6 +1,5 @@
 package com.example.hsdemosoft.ui.main
 
-import android.app.Activity
 import android.content.res.Configuration
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -22,7 +21,7 @@ import com.example.hsdemosoft.utils.Utilities
 class ListFragment : Fragment() {
 
     lateinit var binding: FragmentListBinding
-    lateinit var viewModel: ListFragmentViewModel
+    private lateinit var viewModel: ListFragmentViewModel
     private var countryAdapter: ListFragmentAdapter? = null
 
     override fun onCreateView(
@@ -48,7 +47,7 @@ class ListFragment : Fragment() {
             viewModel.getCachedData()
         }
 
-        binding.refreshButton?.setOnClickListener{
+        binding.refreshButton.setOnClickListener{
             if (Utilities.chechNetwork(context as MainActivity)){
                 viewModel.getAllCountryData()
             } else{
@@ -95,15 +94,15 @@ class ListFragment : Fragment() {
     }
 
 
-    fun showBanner(status: Boolean){
+    private fun showBanner(status: Boolean){
         if(!status){
             Toast.makeText(context, "NetworkError and cached data not found", Toast.LENGTH_SHORT).show()
-            binding.sadImage?.visibility = View.VISIBLE
-            binding.refreshButton?.visibility = View.VISIBLE
+            binding.sadImage.visibility = View.VISIBLE
+            binding.refreshButton.visibility = View.VISIBLE
             binding.countryRecycler.visibility = View.GONE
         } else {
-            binding.sadImage?.visibility = View.GONE
-            binding.refreshButton?.visibility = View.GONE
+            binding.sadImage.visibility = View.GONE
+            binding.refreshButton.visibility = View.GONE
             binding.countryRecycler.visibility = View.VISIBLE
         }
     }

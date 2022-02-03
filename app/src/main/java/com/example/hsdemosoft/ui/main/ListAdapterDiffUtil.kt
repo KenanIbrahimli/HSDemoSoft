@@ -2,7 +2,6 @@ package com.example.hsdemosoft.ui.main
 
 import androidx.recyclerview.widget.DiffUtil
 import com.example.hsdemosoft.models.Country
-import com.example.hsdemosoft.models.CountryModel
 
 class ListAdapterDiffUtil(
     private val oldList: ArrayList<Country>,
